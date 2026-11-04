@@ -41,3 +41,17 @@ p, .paragraph {
     line-height: 16px;
     margin: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 800px;
+    padding: 16px;
+}
