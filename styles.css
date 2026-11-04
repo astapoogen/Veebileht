@@ -1,0 +1,43 @@
+/* FONDI JAOTUS
+
+Figma typography style = CSS vastand
+---
+Title = h1, .title
+Subtitle = h2, .subtitle
+Paragraph = p, .paragraph
+Small = .small
+
+*/
+
+h1, .title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+h2, .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    margin: 0;
+}
+
+p, .paragraph {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.small {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
