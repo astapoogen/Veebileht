@@ -41,3 +41,160 @@ p, .paragraph {
     line-height: 16px;
     margin: 0;
 }
+/* peamine konteiner, mis hoiab kogu sisu */
+body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 64px;
+    overflow-x: hidden;
+}
+/* üksik blokk sisus - tüüpiliselt formaadis: pealkiri, whatever sisu vajalik */
+.block { 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Dropdown Button */ /* https://www.w3schools.com/howto/howto_js_dropdown.asp */
+.dropbtn {
+  background-color: #696969;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  padding: 16px 32px;
+  width: 100%;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover {
+  background-color: #2980B9;
+}
+
+/* chevron */
+.dropbtn img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.dropbtn img.show {
+  transform: rotate(180deg);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding: 16px 0px 0px 0px;
+  gap: 16px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.dropdown-content.show {display:flex;}
+
+/* joon + 2 node'i on selle konteineri sees */
+.timeline-segment {
+  position: relative; /* määrab et selle ülemine vasak nurk on 0,0 */
+  width: 400px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Horizontal Line */
+.timeline-line {
+  position: absolute; /* määrab et vastab vanema originile - ei huvita ülejäänud dokumenti */
+  top: 50%; /* ole 50% vanema kõrgusest */
+  left: 0; /* vasak ots on vanema vasak äär */
+  right: 0; /* parem ots on vanema parem äär */
+  height: 4px;
+  background-color: #7d7d7d;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Base Node Styling */
+.timeline-node {
+  position: absolute;
+  top: 50%; 
+  transform: translate(-50%, -50%); /* viib enda keskpunkti nö enda relatiivsesse 0,0-i */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Node Dot */
+.dot {
+  width: 16px;
+  height: 16px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+/* Node Text Label */
+.label {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* node positioning: */
+.timeline-node.top .label {
+  bottom: 32px;
+}
+
+.timeline-node.bottom .label {
+  top: 32px;
+}
+
+.timeline-node.top {
+  left: 25%;
+}
+
+.timeline-node.bottom {
+  left: 75%; 
+}
+
+/* jank millest ma ei saa 100% aru - teeb timeline'i scrollitavaks nii, et see algab bloki vasakust servast */
+.timeline-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: auto;
+}
+
+.timeline-spacing {
+  display: flex;
+  width: max-content; /* Hugs all segments without collapsing */
+  /* Dynamically matches space from screen edge to the 800px text box */
+  padding-left: max(2rem, calc((100vw - 800px) / 2));
+  padding-right: max(2rem, calc((100vw - 800px) / 2));
+}
