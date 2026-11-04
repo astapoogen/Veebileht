@@ -41,8 +41,8 @@ p, .paragraph {
     line-height: 16px;
     margin: 0;
 }
-
-body {
+/* peamine konteiner, mis hoiab kogu sisu */
+body { 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,8 +50,8 @@ body {
     gap: 64px;
     overflow-x: hidden;
 }
-
-.block {
+/* üksik blokk sisus - tüüpiliselt formaadis: pealkiri, whatever sisu vajalik */
+.block { 
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -76,6 +76,7 @@ body {
   background-color: #2980B9;
 }
 
+/* chevron */
 .dropbtn img {
   width: 24px;
   height: 24px;
@@ -112,7 +113,7 @@ body {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .dropdown-content.show {display:flex;}
 
-
+/* joon + 2 node'i on selle konteineri sees */
 .timeline-segment {
   position: relative; /* määrab et selle ülemine vasak nurk on 0,0 */
   width: 400px;
@@ -162,7 +163,7 @@ body {
   color: #000000;
 }
 
-/* Top Placement */
+/* node positioning: */
 .timeline-node.top .label {
   bottom: 32px;
 }
@@ -179,6 +180,7 @@ body {
   left: 75%; 
 }
 
+/* jank millest ma ei saa 100% aru - teeb timeline'i scrollitavaks nii, et see algab bloki vasakust servast */
 .timeline-container {
   width: 100vw;
   position: relative;
