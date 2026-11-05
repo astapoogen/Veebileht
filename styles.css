@@ -198,3 +198,56 @@ body {
   padding-left: max(2rem, calc((100vw - 800px) / 2));
   padding-right: max(2rem, calc((100vw - 800px) / 2));
 }
+
+
+
+
+
+/* Kontaktinfo (vasakul pilt, paremal andmed) tapsed px pole veel teada */
+.kontaktinfo {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.kontaktinfo-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Asukohainfo (hoone pilt ja lingid korvuti) */
+.asukohainfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.asukohainfo-ylemine {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.asukohainfo-foto {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* figmas olev telefoni logo ja nr korvuti */
+.inforida {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.inforida img {
+    width: 16px;
+    height: 16px;
+}
