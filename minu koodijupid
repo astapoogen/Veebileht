@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Veebileht</title>
+  
+<!-- ma katsetasin milline veebilehel valja naeks, ma ei oska giti üldse kasutada -->
+
+</head>
+<body>
+
+  <header id="päis">
+    <div class="logo">Lehe Nimi Logo Vms</div>
+    <nav class="nav-lingid">
+      <a href="#">Koduleht</a>
+      <a href="#">Kes ja Kus?</a>
+      <a href="#">Kõik Teemad</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Leht</h1>
+    <p>Lühikene kirjeldus leheküljest</p>
+  </section>
+
+  <aside id="sisukord">
+    <h3>Sisukord</h3>
+    <ul>
+      <li><a href="#">Pealkiri</a></li>
+      <li><a href="#">Pealkiri</a></li>
+      <li><a href="#">Pealkiri</a></li>
+      <li><a href="#">Pealkiri</a></li>
+      <li><a href="#">Pealkiri</a></li>
+    </ul>
+  </aside>
+
+</body>
+</html>
