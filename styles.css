@@ -336,7 +336,11 @@ main {
   z-index: 3;
 }
 
-#sisukord h3 {
+#sisukord h2 {
+  font-family: inherit;
+  font-size: 1.17em;
+  font-weight: bold;
+  line-height: normal;
   margin: 0 0 10px 0;
   border-bottom: 1px solid #b1b1b1;
   padding-bottom: 5px;

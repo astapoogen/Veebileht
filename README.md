@@ -4,3 +4,4 @@ Veebileht aitab Tartu Ülikooli informaatika esmakursuslastel leida infot, mida 
 
 
 Rühmatöö plaanis kokku lepitud käitumisnormid on meile endiselt olulised, meie arvates ei ole vaja midagi lisada ega muuta.
+S
