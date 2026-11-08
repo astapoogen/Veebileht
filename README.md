@@ -1,6 +1,6 @@
 # Veebileht informaatikatudengile
 
-Rühma Lehva veebileht aitab Tartu Ülikooli mineval informaatikatudengil vajalikku infot leida.
+Rühm Lehva veebileht aitab Tartu Ülikooli mineval informaatikatudengil vajalikku infot leida.
 
 ## Lehe ülesehitus
 
