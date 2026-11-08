@@ -10,12 +10,44 @@
 
 <body>
 
-    <div class="block">
+
+    <div class="header-container">
+        <header id="päis">
+        <div class="logo">Lehenimi ja Logo</div>
+        <nav class="nav-lingid">
+            <a class="subtitle" href="#">Koduleht</a>
+            <a class="subtitle" href="#">Kes ja Kus?</a>
+            <a class="subtitle" href="#">Kõik Teemad</a>
+        </nav>
+        </header>
+
+        <section id="hero">
+        <h1>Leht</h1>
+        <p>Lühikene kirjeldus leheküljest</p>
+        </section>
+    </div>
+    
+    <!-- need viited on imelikud pliis change-->
+    <main>
+        <aside id="sisukord" class="small">
+            <h3>Sisukord</h3>
+            <nav aria-label="Sisukord">
+                <ul>
+                    <li><a href="#tutvustus">Tutvustus</a></li>
+                    <li><a href="#esimene-dropdown">Esimene rippmenüü</a></li>
+                    <li><a href="#teine-dropdown">Teine rippmenüü ja tutvustus</a></li>
+                    <li><a href="#ajajoon">Ajajoon</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+    <div class="block" id="tutvustus">
         <h1>Tere tulemast!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
     </div>
 
-    <div class="block">
+    <div class="block" id="esimene-dropdown">
         <div class="dropdown">
             <button onclick="toggleDropdown(this)" class="dropbtn paragraph"><img src="img/chevron.svg" alt="Dropdown">Dropdown</button>
             <div class="dropdown-content">
@@ -25,7 +57,7 @@
         </div>
     </div>  
 
-    <div class="block">
+    <div class="block" id="teine-dropdown">
         <div class="dropdown">
             <button onclick="toggleDropdown(this)" class="dropbtn paragraph"><img src="img/chevron.svg" alt="Dropdown">Dropdown</button>
             <div class="dropdown-content">
@@ -38,7 +70,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
     </div>
 
-    <div class="block">
+    <div class="block" id="ajajoon">
         <div class="timeline-container">
             <div class="timeline-spacing">
 
@@ -96,7 +128,8 @@
             </div>
         </div>
     </div>
+        </div>
+    </main>
 </body>
 
 </html>
-

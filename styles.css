@@ -44,6 +44,7 @@ p, .paragraph {
 
 body { 
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* hoiab sisukorda ja sisu */
