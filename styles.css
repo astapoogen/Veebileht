@@ -229,12 +229,20 @@ main {
     width: 100%;
 }
 
+.kontaktijoon {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #999;
+}
+
 .kontaktinfo-foto {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    background-color: #eaeaea;
 }
 
 .asukohainfo {
