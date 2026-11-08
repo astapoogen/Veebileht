@@ -46,9 +46,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
     gap: 64px;
     overflow-x: hidden;
+    margin: 0;
 }
 /* üksik blokk sisus - tüüpiliselt formaadis: pealkiri, whatever sisu vajalik */
 .block { 
@@ -197,4 +197,77 @@ body {
   /* Dynamically matches space from screen edge to the 800px text box */
   padding-left: max(2rem, calc((100vw - 800px) / 2));
   padding-right: max(2rem, calc((100vw - 800px) / 2));
+}
+
+#päis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b3b3b3;
+  padding: 16px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#päis .logo {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#päis .nav-lingid a {
+  text-decoration: none;
+  margin-left: 15px;
+  color: black;
+}
+
+#päis .nav-lingid a:hover {
+  text-decoration: underline;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 140px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sisukord {
+  background-color: #eaeaea;
+  padding: 15px;
+  width: 200px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+#sisukord h3 {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #b1b1b1;
+  padding-bottom: 5px;
+}
+
+#sisukord ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+#sisukord li {
+  margin-bottom: 6px;
+}
+
+#sisukord a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#sisukord a:hover {
+  text-decoration: underline;
+}
+
+.header-container {
+  width: 100%;
 }
