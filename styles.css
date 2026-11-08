@@ -208,6 +208,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 16px;
+    width: 100%;
 }
 
 .kontaktinfo-foto {
@@ -218,14 +219,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Asukohainfo (hoone pilt ja lingid korvuti) */
 .asukohainfo {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.asukohainfo-ylemine {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -250,4 +244,20 @@ body {
 .inforida img {
     width: 16px;
     height: 16px;
+}
+
+.kontaktinfo-tekst {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    gap: 8px;
+}
+
+.inforida a:hover {
+    text-decoration: underline;
+}
+
+.inforida a {
+    color: black;
+    text-decoration: none;
 }
