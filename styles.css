@@ -41,15 +41,32 @@ p, .paragraph {
     line-height: 16px;
     margin: 0;
 }
-/* peamine konteiner, mis hoiab kogu sisu */
+
 body { 
+  margin: 0;
+}
+
+/* hoiab sisukorda ja sisu */
+main {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 800px); /* 200px = sisukorra konteiner, minmax(0, 800px) = sisu konteiner */
+    align-items: start;
+    justify-content: center;
+    column-gap: 48px;
+    width: calc(100% - 48px); /* 48px = vasak ja parem padding */
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* peamine konteiner, mis hoiab kogu sisu */
+.main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    overflow-x: hidden;
-    margin: 0;
+    min-width: 0;
 }
+
 /* üksik blokk sisus - tüüpiliselt formaadis: pealkiri, whatever sisu vajalik */
 .block { 
     display: flex;
@@ -232,15 +249,18 @@ body {
   background-color: #eaeaea;
   padding: 140px 20px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 #sisukord {
+  position: sticky;
+  top: 32px;
   background-color: #eaeaea;
   padding: 15px;
   width: 200px;
   box-sizing: border-box;
-  margin-left: 20px;
+  margin: 0;
+  align-self: start;
 }
 
 #sisukord h3 {
@@ -270,4 +290,16 @@ body {
 
 .header-container {
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: minmax(0, 800px);
+    row-gap: 32px;
+  }
+
+  #sisukord {
+    position: static;
+    width: 100%;
+  }
 }
