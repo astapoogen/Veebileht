@@ -8,3 +8,8 @@
 * **Pealeht** – sissejuhatav info, tähtsad kuupäevad, üritused ja KKK.
 * **Üldine info** – olulised kontaktid, majaplaan ja vajalikud veebikeskkonnad.
 * **Kõik teemad** – tudengite küsimused ja vastused, mured ning muud teemad.
+
+# Tiimiliikmed
+* Aron
+* Joonas
+* Marta
