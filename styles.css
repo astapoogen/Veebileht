@@ -22,6 +22,7 @@ TÜ Subtitle = .tusubtitle
   --black: #0B162D;
   --purewhite: #FFFFFF;
   --pureblack: #000000;
+  --paragraph-font-size: 20px;
 }
 
 /* FONDID EI RAKENDU KORRALIKULT. SEE ON PROBLEEM :) */
@@ -62,7 +63,7 @@ h2, .subtitle {
 p, .paragraph {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: var(--paragraph-font-size);
     line-height: 24px;
     margin: 0;
 }
@@ -185,90 +186,168 @@ main {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .dropdown-content.show {display:flex;}
 
-/* joon + 2 node'i on selle konteineri sees */
+/* Full-width scrolling area */
+.timeline-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    overflow-x: auto;
+
+    /* Keeps the scrollbar away from the events */
+    padding-bottom: 12px;
+}
+
+/* Holds the segments in one horizontal row */
+.timeline-spacing {
+    display: flex;
+    width: max-content;
+
+    /* Aligns timeline with the 800px content column */
+    padding-left: max(24px, calc((100vw - 800px) / 2));
+    padding-right: max(24px, calc((100vw - 800px) / 2));
+}
+
+/* One line section containing two events */
 .timeline-segment {
-  position: relative; /* määrab et selle ülemine vasak nurk on 0,0 */
-  width: 400px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+    position: relative;
+    width: 260px;
+    height: 128px;
+    flex-shrink: 0;
 }
 
-/* Horizontal Line */
+/* Horizontal timeline line */
 .timeline-line {
-  position: absolute; /* määrab et vastab vanema originile - ei huvita ülejäänud dokumenti */
-  top: 50%; /* ole 50% vanema kõrgusest */
-  left: 0; /* vasak ots on vanema vasak äär */
-  right: 0; /* parem ots on vanema parem äär */
-  height: 4px;
-  background-color: #7d7d7d;
-  transform: translateY(-50%);
-  z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #7d7d7d;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
-/* Base Node Styling */
+/* One event and its label */
 .timeline-node {
-  position: absolute;
-  top: 50%; 
-  transform: translate(-50%, -50%); /* viib enda keskpunkti nö enda relatiivsesse 0,0-i */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
 }
 
-/* Node Dot */
-.dot {
-  width: 16px;
-  height: 16px;
-  background-color: #d9d9d9;
-  border-radius: 50%;
+/* Stable hover hitbox covering the dot, gap, and expanded label */
+.timeline-node::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 80px;
 }
 
-/* Node Text Label */
-.label {
-  position: absolute;
-  white-space: nowrap;
-  font-size: 24px;
-  font-weight: 500;
-  color: #000000;
+.timeline-node.top::before {
+    bottom: -16px;
 }
 
-/* node positioning: */
-.timeline-node.top .label {
-  bottom: 32px;
+.timeline-node.bottom::before {
+    top: -16px;
 }
 
-.timeline-node.bottom .label {
-  top: 32px;
-}
-
+/* Give the two events in each segment separate positions */
 .timeline-node.top {
-  left: 25%;
+    left: 25%;
 }
 
 .timeline-node.bottom {
-  left: 75%; 
+    left: 75%;
 }
 
-/* jank millest ma ei saa 100% aru - teeb timeline'i scrollitavaks nii, et see algab bloki vasakust servast */
-.timeline-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow-x: auto;
+/* Timeline dot */
+.timeline-node .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    transition:
+        width 200ms ease,
+        height 200ms ease,
+        background-color 200ms ease;
 }
 
-.timeline-spacing {
-  display: flex;
-  width: max-content; /* Hugs all segments without collapsing */
-  /* Dynamically matches space from screen edge to the 800px text box */
-  padding-left: max(2rem, calc((100vw - 800px) / 2));
-  padding-right: max(2rem, calc((100vw - 800px) / 2));
+/* Event label: starts at .small (14px / 16px) */
+.timeline-node .label {
+    position: absolute;
+    width: max-content;
+    white-space: nowrap;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black);
+    transition:
+        top 200ms ease,
+        bottom 200ms ease,
+        font-size 200ms ease,
+        line-height 200ms ease,
+        color 200ms ease;
+}
+
+/* Normal 16px dot radius (8px) + 16px gap */
+.timeline-node.top .label {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-node.bottom .label {
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Raise hovered segment/node above neighbors */
+.timeline-segment:hover,
+.timeline-segment:focus-within {
+    z-index: 10;
+}
+
+.timeline-node:hover,
+.timeline-node:focus-visible {
+    z-index: 11;
+}
+
+/* Enlarged dot is 32px tall, followed by the 16px gap */
+.timeline-node.top:hover .label,
+.timeline-node.top:focus-visible .label {
+    bottom: 48px;
+}
+
+.timeline-node.bottom:hover .label,
+.timeline-node.bottom:focus-visible .label {
+    top: 48px;
+}
+
+/* Enlarged dot */
+.timeline-node:hover .dot,
+.timeline-node:focus-visible .dot {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary);
+    box-shadow: none;
+}
+
+/* Transition from Small typography to Paragraph typography */
+.timeline-node:hover .label,
+.timeline-node:focus-visible .label {
+    font-size: var(--paragraph-font-size);
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--black);
 }
 
 
