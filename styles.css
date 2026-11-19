@@ -23,6 +23,7 @@ TÜ Subtitle = .tusubtitle
   --purewhite: #FFFFFF;
   --pureblack: #000000;
   --paragraph-font-size: 20px;
+  --title-font-size: 32px;
 }
 
 /* FONDID EI RAKENDU KORRALIKULT. SEE ON PROBLEEM :) */
@@ -30,7 +31,7 @@ TÜ Subtitle = .tusubtitle
 h1, .title {
     font-family: 'Kaisei Decol', sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: var(--title-font-size);
     line-height: 56px;
     text-transform: capitalize;
     margin: 0;
@@ -362,10 +363,37 @@ main {
 
 /* Kontaktinfo (vasakul pilt, paremal andmed) tapsed px pole veel teada */
 .kontaktinfo {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  background-color: var(--purewhite);
+  padding: 16px;
+  border-radius: 30px;
+  transition: background-color 200ms ease;
+}
+
+.kontaktinfo:hover {
+  background-color: var(--white);
+}
+
+.kontaktinfo-title h2 {
+  font-family: 'Kaisei Decol', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0;
+  color: var(--black);
+  transition:
+    font-size 200ms ease,
+    line-height 200ms ease,
+    font-weight 200ms ease;
+}
+
+.kontaktinfo:hover .kontaktinfo-title h2 {
+  font-weight: 700;
+  font-size: var(--title-font-size);
+  line-height: 56px;
 }
 
 .kontaktijoon {
@@ -376,12 +404,12 @@ main {
 }
 
 .kontaktinfo-foto {
-    width: 80px;
-    height: 80px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    background-color: #eaeaea;
+    background-color: var(--secondary);
 }
 
 .asukohainfo {
@@ -403,7 +431,12 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 8px;
+}
+
+.inforida-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .inforida img {
@@ -415,11 +448,22 @@ main {
     display: flex;
     flex-direction: column; 
     width: 100%;
-    gap: 8px;
+    gap: 16px;
+}
+
+.kontaktinfo-title {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    gap: 4px;
+}
+
+.kontaktinfo-title p {
+  color: var(--quaternary);
 }
 
 .inforida a:hover {
-    text-decoration: underline;
+  color: var(--quaternary);
 }
 
 .inforida a {
