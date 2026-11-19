@@ -153,13 +153,6 @@ main {
   gap: 16px;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .dropdown-content.show {display:flex;}
@@ -412,4 +405,15 @@ main {
     position: static;
     width: 100%;
   }
+}
+
+.dropdown-content p a {
+    display: inline;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.kontaktinfo h3,
+.asukohainfo h3 {
+    font-family: 'Inter', sans-serif;
 }
