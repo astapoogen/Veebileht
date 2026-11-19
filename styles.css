@@ -93,22 +93,23 @@ body {
 /* hoiab sisukorda ja sisu */
 main {
     display: grid;
-    grid-template-columns: 200px minmax(0, 800px); /* 200px = sisukorra konteiner, minmax(0, 800px) = sisu konteiner */
+    /* Vasakul tühi ruum (1fr), keskel täpselt 712px sisu, paremal 1fr */
+    grid-template-columns: 1fr 712px 1fr;
     align-items: start;
-    justify-content: center;
     column-gap: 48px;
-    width: calc(100% - 48px); /* 48px = vasak ja parem padding */
-    max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
 }
 
 /* peamine konteiner, mis hoiab kogu sisu */
 .main-content {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    min-width: 0;
+    width: 712px;
+    padding-bottom: 64px;
 }
 
 /* üksik blokk sisus - tüüpiliselt formaadis: pealkiri, whatever sisu vajalik */
@@ -116,7 +117,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 800px;
+    max-width: 712px;
     width: 100%;
 }
 
@@ -520,16 +521,18 @@ main {
   margin-bottom: 32px;
 }
 
+/* Sisukord läheb esimesse (vasakusse) veergu ja joondub paremale sisu kõrvale */
 #sisukord {
-  position: sticky;
-  top: 32px;
-  background-color: #eaeaea;
-  padding: 15px;
-  width: 200px;
-  box-sizing: border-box;
-  margin: 0;
-  align-self: start;
-  z-index: 3;
+    grid-column: 1;
+    justify-self: end;
+    position: sticky;
+    top: 32px;
+    background-color: #eaeaea;
+    padding: 15px;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 3;
 }
 
 #sisukord h2 {
@@ -566,10 +569,6 @@ main {
 }
 
 @media (max-width: 800px) {
-  main {
-    grid-template-columns: minmax(0, 800px);
-    row-gap: 32px;
-  }
 
   #sisukord {
     position: static;
