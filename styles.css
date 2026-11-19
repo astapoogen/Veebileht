@@ -364,9 +364,6 @@ main {
 }
 
 
-
-
-
 /* Kontaktinfo (vasakul pilt, paremal andmed) tapsed px pole veel teada */
 .kontaktinfo {
   display: flex;
@@ -413,18 +410,43 @@ main {
     background-color: var(--secondary);
 }
 
-.asukohainfo {
+.kontaktinfo-tekst {
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    width: 100%;
     gap: 16px;
 }
 
+.kontaktinfo-title {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    gap: 4px;
+}
+
+.kontaktinfo-title p {
+  color: var(--quaternary);
+}
+
+.asukohainfo {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
 .asukohainfo-foto {
-    width: 240px;
-    max-width: 100%;
-    height: auto;
+    width: 277px;
+    height: 208px;
     display: block;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.asukohainfo-tekst {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    gap: 16px;
 }
 
 /* figmas olev telefoni logo ja nr korvuti */
@@ -443,24 +465,6 @@ main {
 .inforida img {
     width: 16px;
     height: 16px;
-}
-
-.kontaktinfo-tekst {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-    gap: 16px;
-}
-
-.kontaktinfo-title {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-    gap: 4px;
-}
-
-.kontaktinfo-title p {
-  color: var(--quaternary);
 }
 
 .inforida a:hover {
