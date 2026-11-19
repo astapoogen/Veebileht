@@ -34,6 +34,7 @@ h1, .title {
     line-height: 56px;
     text-transform: capitalize;
     margin: 0;
+    color: var(--black)
 }
 
 h2, .subtitle {
@@ -42,6 +43,7 @@ h2, .subtitle {
     font-size: 24px;
     line-height: 40px;
     margin: 0;
+    color: var(--black)
 }
 
 .tutitle {
@@ -50,6 +52,7 @@ h2, .subtitle {
     font-size: 32px;
     line-height: 56px;
     margin: 0;
+    color: var(--black)
 }
 
 .tusubtitle {
@@ -58,6 +61,7 @@ h2, .subtitle {
     font-size: 24px;
     line-height: 40px;
     margin: 0;
+    color: var(--black)
 }
 
 p, .paragraph {
@@ -66,6 +70,7 @@ p, .paragraph {
     font-size: var(--paragraph-font-size);
     line-height: 24px;
     margin: 0;
+    color: var(--black)
 }
 
 .small {
@@ -79,6 +84,7 @@ p, .paragraph {
 body { 
   margin: 0;
   overflow-x: hidden;
+  background-color: var(--bg);
 }
 
 /* hoiab sisukorda ja sisu */
