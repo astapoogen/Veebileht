@@ -442,6 +442,7 @@ main {
     background-color: var(--purewhite);
     padding: 16px;
     border-radius: 10px;
+    transition: background-color 200ms ease;
 }
 
 /* figmas olev telefoni logo ja nr korvuti */
