@@ -22,25 +22,31 @@ TÜ Subtitle = .tusubtitle
   --black: #0B162D;
   --purewhite: #FFFFFF;
   --pureblack: #000000;
+  --paragraph-font-size: 20px;
+  --title-font-size: 32px;
 }
 
-/* FONDID EI RAKENDU KORRALIKULT. SEE ON PROBLEEM :) */
+::-webkit-scrollbar {
+    display: none;
+}
 
 h1, .title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Kaisei Decol', sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: var(--title-font-size);
     line-height: 56px;
     text-transform: capitalize;
     margin: 0;
+    color: var(--black)
 }
 
 h2, .subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Kaisei Decol', sans-serif;
     font-weight: 600;
     font-size: 24px;
     line-height: 40px;
     margin: 0;
+    color: var(--black)
 }
 
 .tutitle {
@@ -49,6 +55,7 @@ h2, .subtitle {
     font-size: 32px;
     line-height: 56px;
     margin: 0;
+    color: var(--black)
 }
 
 .tusubtitle {
@@ -57,18 +64,20 @@ h2, .subtitle {
     font-size: 24px;
     line-height: 40px;
     margin: 0;
+    color: var(--black)
 }
 
 p, .paragraph {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: var(--paragraph-font-size);
     line-height: 24px;
     margin: 0;
+    color: var(--black)
 }
 
 .small {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -78,27 +87,29 @@ p, .paragraph {
 body { 
   margin: 0;
   overflow-x: hidden;
+  background-color: var(--bg);
 }
 
 /* hoiab sisukorda ja sisu */
 main {
     display: grid;
-    grid-template-columns: 200px minmax(0, 800px); /* 200px = sisukorra konteiner, minmax(0, 800px) = sisu konteiner */
+    /* Vasakul tühi ruum (1fr), keskel täpselt 712px sisu, paremal 1fr */
+    grid-template-columns: 1fr 712px 1fr;
     align-items: start;
-    justify-content: center;
     column-gap: 48px;
-    width: calc(100% - 48px); /* 48px = vasak ja parem padding */
-    max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
 }
 
 /* peamine konteiner, mis hoiab kogu sisu */
 .main-content {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    min-width: 0;
+    width: 712px;
+    padding-bottom: 64px;
 }
 
 /* üksik blokk sisus - tüüpiliselt formaadis: pealkiri, whatever sisu vajalik */
@@ -106,25 +117,41 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 800px;
+    max-width: 712px;
     width: 100%;
 }
 
 /* Dropdown Button */ /* https://www.w3schools.com/howto/howto_js_dropdown.asp */
 .dropbtn {
-  background-color: #696969;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--black);
   border: none;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   gap: 16px;
   padding: 16px 32px;
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover {
-  background-color: #2980B9;
+  background-color: var(--tertiary);
+}
+
+.dropbtn.show {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.dropbtn.show:hover {
+  background-color: var(--quaternary);
+  color: var(--white);
+}
+
+.dropbtn:hover img {
+  transform: rotate(15deg);
 }
 
 /* chevron */
@@ -132,10 +159,16 @@ main {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
+  filter: invert(7%) sepia(11%) saturate(7453%) hue-rotate(196deg) brightness(103%) contrast(97%);
 }
 
 .dropbtn img.show {
   transform: rotate(180deg);
+    filter: invert(97%) sepia(93%) saturate(967%) hue-rotate(178deg) brightness(103%) contrast(102%);
+}
+
+.dropbtn:hover img.show {
+  transform: rotate(165deg);
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -153,106 +186,215 @@ main {
   gap: 16px;
 }
 
+.block a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.block a:hover {
+  color: var(--quaternary);
+  text-decoration: none;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.dropdown-content.show {display:flex;}
+.dropdown-content.show {
+  display:flex;
+}
 
-/* joon + 2 node'i on selle konteineri sees */
+/* Full-width scrolling area */
+.timeline-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    overflow-x: auto;
+
+    /* Keeps the scrollbar away from the events */
+    padding-bottom: 12px;
+}
+
+/* Holds the segments in one horizontal row */
+.timeline-spacing {
+    display: flex;
+    width: max-content;
+
+    /* Aligns timeline with the 800px content column */
+    padding-left: max(24px, calc((100vw - 800px) / 2));
+    padding-right: max(24px, calc((100vw - 800px) / 2));
+}
+
+/* One line section containing two events */
 .timeline-segment {
-  position: relative; /* määrab et selle ülemine vasak nurk on 0,0 */
-  width: 400px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+    position: relative;
+    width: 260px;
+    height: 128px;
+    flex-shrink: 0;
 }
 
-/* Horizontal Line */
+/* Horizontal timeline line */
 .timeline-line {
-  position: absolute; /* määrab et vastab vanema originile - ei huvita ülejäänud dokumenti */
-  top: 50%; /* ole 50% vanema kõrgusest */
-  left: 0; /* vasak ots on vanema vasak äär */
-  right: 0; /* parem ots on vanema parem äär */
-  height: 4px;
-  background-color: #7d7d7d;
-  transform: translateY(-50%);
-  z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--secondary);
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
-/* Base Node Styling */
+/* One event and its label */
 .timeline-node {
-  position: absolute;
-  top: 50%; 
-  transform: translate(-50%, -50%); /* viib enda keskpunkti nö enda relatiivsesse 0,0-i */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
 }
 
-/* Node Dot */
-.dot {
-  width: 16px;
-  height: 16px;
-  background-color: #d9d9d9;
-  border-radius: 50%;
+/* Stable hover hitbox covering the dot, gap, and expanded label */
+.timeline-node::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 80px;
 }
 
-/* Node Text Label */
-.label {
-  position: absolute;
-  white-space: nowrap;
-  font-size: 24px;
-  font-weight: 500;
-  color: #000000;
+.timeline-node.top::before {
+    bottom: -16px;
 }
 
-/* node positioning: */
-.timeline-node.top .label {
-  bottom: 32px;
+.timeline-node.bottom::before {
+    top: -16px;
 }
 
-.timeline-node.bottom .label {
-  top: 32px;
-}
-
+/* Give the two events in each segment separate positions */
 .timeline-node.top {
-  left: 25%;
+    left: 25%;
 }
 
 .timeline-node.bottom {
-  left: 75%; 
+    left: 75%;
 }
 
-/* jank millest ma ei saa 100% aru - teeb timeline'i scrollitavaks nii, et see algab bloki vasakust servast */
-.timeline-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow-x: auto;
+/* Timeline dot */
+.timeline-node .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    transition:
+        width 200ms ease,
+        height 200ms ease,
+        background-color 200ms ease;
 }
 
-.timeline-spacing {
-  display: flex;
-  width: max-content; /* Hugs all segments without collapsing */
-  /* Dynamically matches space from screen edge to the 800px text box */
-  padding-left: max(2rem, calc((100vw - 800px) / 2));
-  padding-right: max(2rem, calc((100vw - 800px) / 2));
+/* Event label: starts at .small (14px / 16px) */
+.timeline-node .label {
+    position: absolute;
+    width: max-content;
+    white-space: nowrap;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--quaternary);
+    transition:
+        top 200ms ease,
+        bottom 200ms ease,
+        font-size 200ms ease,
+        color 200ms ease,
+        line-height 200ms ease,
+        color 200ms ease;
 }
 
+/* Normal 16px dot radius (8px) + 16px gap */
+.timeline-node.top .label {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+.timeline-node.bottom .label {
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+/* Raise hovered segment/node above neighbors */
+.timeline-segment:hover,
+.timeline-segment:focus-within {
+    z-index: 10;
+}
+
+.timeline-node:hover,
+.timeline-node:focus-visible {
+    z-index: 11;
+}
+
+/* Enlarged dot is 32px tall, followed by the 16px gap */
+.timeline-node.top:hover .label,
+.timeline-node.top:focus-visible .label {
+    bottom: 48px;
+}
+
+.timeline-node.bottom:hover .label,
+.timeline-node.bottom:focus-visible .label {
+    top: 48px;
+}
+
+/* Enlarged dot */
+.timeline-node:hover .dot,
+.timeline-node:focus-visible .dot {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary);
+    box-shadow: none;
+}
+
+/* Transition from Small typography to Paragraph typography */
+.timeline-node:hover .label,
+.timeline-node:focus-visible .label {
+    font-size: var(--paragraph-font-size);
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--black);
+}
 
 
 /* Kontaktinfo (vasakul pilt, paremal andmed) tapsed px pole veel teada */
 .kontaktinfo {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  background-color: var(--purewhite);
+  padding: 16px;
+  border-radius: 30px;
+  transition: background-color 200ms ease;
+}
+
+.kontaktinfo:hover, .asukohainfo:hover .asukohainfo-tekst {
+  background-color: var(--white);
+}
+
+.kontaktinfo-title h2, .asukohainfo h2 {
+  color: var(--black);
+  transition:
+    font-size 200ms ease,
+    line-height 200ms ease,
+    font-weight 200ms ease;
+}
+
+.kontaktinfo:hover .kontaktinfo-title h2, .asukohainfo:hover h2 {
+  font-weight: 700;
+  font-size: var(--title-font-size);
+  line-height: 56px;
 }
 
 .kontaktijoon {
@@ -263,26 +405,57 @@ main {
 }
 
 .kontaktinfo-foto {
-    width: 80px;
-    height: 80px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    background-color: #eaeaea;
+    background-color: var(--secondary);
+}
+
+.kontaktinfo-tekst {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    gap: 16px;
+}
+
+.kontaktinfo-title {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    gap: 4px;
+}
+
+.kontaktinfo-title p {
+  color: var(--quaternary);
 }
 
 .asukohainfo {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 32px;
 }
 
 .asukohainfo-foto {
-    width: 240px;
-    max-width: 100%;
-    height: auto;
+    width: 277px;
+    height: 208px;
     display: block;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.asukohainfo-tekst {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    width: 100%;
+    height: 176px;
+    gap: 16px;
+    background-color: var(--purewhite);
+    padding: 16px;
+    border-radius: 10px;
 }
 
 /* figmas olev telefoni logo ja nr korvuti */
@@ -290,7 +463,12 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 8px;
+}
+
+.inforida-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .inforida img {
@@ -298,15 +476,8 @@ main {
     height: 16px;
 }
 
-.kontaktinfo-tekst {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-    gap: 8px;
-}
-
 .inforida a:hover {
-    text-decoration: underline;
+  color: var(--quaternary);
 }
 
 .inforida a {
@@ -350,16 +521,18 @@ main {
   margin-bottom: 32px;
 }
 
+/* Sisukord läheb esimesse (vasakusse) veergu ja joondub paremale sisu kõrvale */
 #sisukord {
-  position: sticky;
-  top: 32px;
-  background-color: #eaeaea;
-  padding: 15px;
-  width: 200px;
-  box-sizing: border-box;
-  margin: 0;
-  align-self: start;
-  z-index: 3;
+    grid-column: 1;
+    justify-self: end;
+    position: sticky;
+    top: 32px;
+    background-color: #eaeaea;
+    padding: 15px;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 3;
 }
 
 #sisukord h2 {
@@ -396,10 +569,6 @@ main {
 }
 
 @media (max-width: 800px) {
-  main {
-    grid-template-columns: minmax(0, 800px);
-    row-gap: 32px;
-  }
 
   #sisukord {
     position: static;
