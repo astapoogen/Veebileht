@@ -3,207 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <script src="dropdown.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Kaisei+Decol&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Koduleht</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="dropdown.js" defer></script>
 </head>
-
 <body>
-
-
     <div class="header-container">
         <header id="päis">
-        <div class="logo">Lehenimi ja Logo</div>
-        <nav class="nav-lingid">
-            <a class="subtitle" href="#">Koduleht</a>
-            <a class="subtitle" href="#">Kes ja Kus?</a>
-            <a class="subtitle" href="#">Kõik Teemad</a>
-        </nav>
+            <div class="logo">Lehenimi ja Logo</div>
+            <nav class="nav-lingid">
+                <a class="subtitle" href="#">Koduleht</a>
+                <a class="subtitle" href="#">Kes ja Kus?</a>
+                <a class="subtitle" href="#">Kõik Teemad</a>
+            </nav>
         </header>
 
         <section id="hero">
-        <h1>Leht</h1>
-        <p>Lühikene kirjeldus leheküljest</p>
+            <h1>Koduleht</h1>
+            <p>Esimene semester Tartu Ülikooli informaatikas</p>
         </section>
     </div>
-    
-    <!-- need viited on imelikud pliis change-->
+
     <main>
         <aside id="sisukord" class="small">
             <h2>Sisukord</h2>
             <nav aria-label="Sisukord">
                 <ul>
-                    <li><a href="#tutvustus">Tutvustus</a></li>
-                    <li><a href="#esimene-dropdown">Esimene rippmenüü</a></li>
-                    <li><a href="#teine-dropdown">Teine rippmenüü ja tutvustus</a></li>
-                    <li><a href="#ajajoon">Ajajoon</a></li>
+                    <li><a href="#sissejuhatus">Sissejuhatus</a></li>
+                    <li><a href="#kuupaevad">Tähtsad kuupäevad</a></li>
+                    <li><a href="#uritused">Tudengiüritused</a></li>
+                    <li><a href="#kkk">Korduma kippuvad küsimused</a></li>
                 </ul>
             </nav>
         </aside>
 
         <div class="main-content">
-    <div class="block" id="tutvustus">
-        <h2 class="title">Tere tulemast!</h2>
-        <p><a href="google.com">awesome hyperlink</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
+            <section class="block" id="sissejuhatus">
+                <h2>Sissejuhatus</h2>
+                <p>Tere tulemast Tartu Ülikooli informaatika erialale! Avalehelt leiad esimese semestri tähtajad, info tudengiürituste kohta ja vastused sagedastele küsimustele.</p>
+                <p>Kasuta sisukorda, et liikuda otse sobiva jaotiseni. Õppejõudude kontaktid ja hoonete info leiad lehelt <a href="kes_ja_kus.html">„Kes ja kus?“</a>. Transpordi, ainepunktide ja muude teemade kohta loe lehelt <a href="koik_teemad.html">„Kõik teemad“</a>.</p>
+                <figure class="small">
+            </section>
 
-    <div class="block" id="esimene-dropdown">
-        <div class="dropdown">
-            <button onclick="toggleDropdown(this)" class="dropbtn paragraph"><img src="img/chevron.svg" alt="Dropdown">Dropdown</button>
-            <div class="dropdown-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-        </div>
-    </div>  
+            <section class="block" id="kuupaevad">
+                <h2>Tähtsad kuupäevad</h2>
+                <p>2026/2027. õppeaasta. Ajajoont saab kerida paremale.</p>
+                <div class="timeline-container" tabindex="0" role="region" aria-label="Esimese semestri ajajoon">
+                    <ol class="timeline-spacing" role="list">
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node top">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2026-08-24">24.08.2026</time></strong><br>Esmakursuslaste ainete valik algab</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node bottom">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2026-08-31">31.08.2026</time></strong><br>Õppeaasta algab</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node top">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2026-09-14T23:59">14.09.2026<br>kell 23.59</time></strong><br>Sügisainete valimise tähtaeg</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node bottom">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2026-12-15T21:00">15.12.2026<br>kell 21.00</time></strong><br>Kevadainete valik algab</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node top">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2026-12-21">21.12.</time>–<time datetime="2027-01-03">03.01.</time></strong><br>Jõuluvaheaeg</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node bottom">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2027-01-31">31.01.2027</time></strong><br>Sügissemestri lõpp</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node top">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2027-02-07T23:59">07.02.2027<br>kell 23.59</time></strong><br>Kevadainete valimise tähtaeg</span>
+                            </div>
+                        </li>
+                        <li class="timeline-segment">
+                            <div class="timeline-line" aria-hidden="true"></div>
+                            <div class="timeline-node bottom">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="label small"><strong><time datetime="2027-02-08">08.02.2027</time></strong><br>Kevadsemester algab</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <p class="small">
+                    <a href="https://ut.ee/et/sisu/esimese-semestri-tahtsad-kuupaevad">Esimese semestri tähtajad</a> ·
+                    <a href="https://majandus.ut.ee/sites/default/files/2026-04/Akadeemiline%20kalender%202026_2027.pdf">TÜ akadeemiline kalender (PDF)</a>
+                </p>
+            </section>
 
-    <div class="block" id="teine-dropdown">
-        <div class="dropdown">
-            <button onclick="toggleDropdown(this)" class="dropbtn paragraph"><img src="img/chevron.svg" alt="Dropdown">Dropdown</button>
-            <div class="dropdown-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-        </div>
+            <section class="block" id="uritused">
+                <h2>Tudengiüritused</h2>
+                <p><strong>Retsimine ehk rebaste ristimine.</strong> Kui sinu kursusele korraldatakse retsimine, leiad aja ja koha kursuse grupist. Osalemine on vabatahtlik.</p>
+                <p><strong>Tartu Tudengipäevad.</strong> Kevadel ja sügisel toimuv tudengifestival, kus on võistlusi, kontserte ja muid üritusi. <a href="https://studentdays.ee/">Vaata festivali kava</a>.</p>
+                <p><strong>Tartu ööelu.</strong> Kontserte, klubiõhtuid ja pidusid leiad <a href="https://www.kluub.ee/et/events/tartu">KLUUBi Tartu kalendrist</a>.</p>
+                <p><strong>OLE ROHKEM.</strong> <a href="https://olerohkem.ee/">Tudengimessi ja tudengiorganisatsioonide info</a>.</p>
+            </section>
 
-        <h2 class="title">Tere tulemast!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
+            <section class="block" id="kkk">
+                <h2>Korduma kippuvad küsimused</h2>
 
-    <div class="block" id="ajajoon">
-        <div class="timeline-container">
-            <div class="timeline-spacing">
-
-                <div class="timeline-segment">
-                    <!-- Central line -->
-                    <div class="timeline-line"></div>
-
-                    <!-- Event 1 (Label Top) -->
-                    <div class="timeline-node top">
-                        <span class="label small">XX.XX Sündmus</span>
-                        <div class="dot"></div>
-                    </div>
-
-                    <!-- Event 2 (Label Bottom) -->
-                    <div class="timeline-node bottom">
-                        <div class="dot"></div>
-                        <span class="label small">XX.XX Sündmus</span>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kust näen, millised ained on kohustuslikud?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Ava <a href="https://ois2.ut.ee/">ÕIS-is</a> informaatika õppekava ja vali oma sisseastumisaasta versioon. Seal on kirjas, millised ained on kohustuslikud ja millised saad ise valida.</p>
                     </div>
                 </div>
 
-                <div class="timeline-segment">
-                    <!-- Central line -->
-                    <div class="timeline-line"></div>
-
-                    <!-- Event 1 (Label Top) -->
-                    <div class="timeline-node top">
-                        <span class="label small">XX.XX Sündmus</span>
-                        <div class="dot"></div>
-                    </div>
-
-                    <!-- Event 2 (Label Bottom) -->
-                    <div class="timeline-node bottom">
-                        <div class="dot"></div>
-                        <span class="label small">XX.XX Sündmus</span>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kui kaua saan ainest loobuda?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Üldjuhul saad ÕIS-is registreeringu tühistada kahe nädala jooksul pärast aine esimest kontaktõppe korda. Aines võib olla määratud teine tähtaeg. Vaata <a href="https://ut.ee/et/sisu/oppeainetesse-registreerumine">TÜ juhendit</a> ja aine infot ÕIS-is.</p>
                     </div>
                 </div>
 
-                <div class="timeline-segment">
-                    <!-- Central line -->
-                    <div class="timeline-line"></div>
-
-                    <!-- Event 1 (Label Top) -->
-                    <div class="timeline-node top">
-                        <span class="label small">XX.XX Sündmus</span>
-                        <div class="dot"></div>
-                    </div>
-
-                    <!-- Event 2 (Label Bottom) -->
-                    <div class="timeline-node bottom">
-                        <div class="dot"></div>
-                        <span class="label small">XX.XX Sündmus</span>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kust leian eksami aja?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Vaata aine infot ja tunniplaani <a href="https://ois2.ut.ee/">ÕIS-is</a>. Kui aine pakub mitut eksamiaega, kontrolli, kas pead end sobivale ajale registreerima.</p>
                     </div>
                 </div>
-
-                                <div class="timeline-segment">
-                    <!-- Central line -->
-                    <div class="timeline-line"></div>
-
-                    <!-- Event 1 (Label Top) -->
-                    <div class="timeline-node top">
-                        <span class="label small">XX.XX Sündmus</span>
-                        <div class="dot"></div>
-                    </div>
-
-                    <!-- Event 2 (Label Bottom) -->
-                    <div class="timeline-node bottom">
-                        <div class="dot"></div>
-                        <span class="label small">XX.XX Sündmus</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="block">
-        <div class="kontaktinfo">
-            <svg class="kontaktinfo-foto" viewBox="0 0 80 80" role="img">
-            </svg>
-            <div class="kontaktinfo-tekst">
-                <div class="kontaktinfo-title">
-                    <h2>Nimi</h2>
-                    <p>Tiitel, amet vms</p>
-                </div>
-
-                <p>Üldine kirjeldus, mille puhul temani võiks pöörduda. Pmst “mis probleemidega see vend tegeleb”</p>
-
-                <div class="inforida-container">
-                    <div class="inforida small">
-                        <img src="img/telo.svg" alt="Phone Icon">
-                        <a href="tel:+6767676767">+67 6767 6767</a>
-                    </div>
-                    <div class="inforida small">
-                        <img src="img/meil.svg" alt="Mail Icon">
-                        <a href="mailto:meil.meil@meil.meil">meil.meil@meil.meil</a>
-                    </div>
-                    <div class="inforida small">
-                        <img src="img/asukoht.svg" alt="Location Icon">
-                        <span>Ruum vms kus kõik üldse on</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="block">
-        <div class="asukohainfo">
-            <img class="asukohainfo-foto">
-            <div class="asukohainfo-tekst">
-                <h2>Hoone Nimi</h2>
-                <div class="inforida-container">
-                    <div class="inforida small">
-                        <img src="img/asukoht.svg" alt="Location Icon">
-                        <a href="#">Kus</a>
-                    </div>
-                    <div class="inforida small">
-                        <img src="img/kaart.svg" alt="Map Icon">
-                        <a href="#">Majaplaan</a>
-                    </div>
-                    <div class="inforida small">
-                        <img src="img/veebituur.svg" alt="Web-tour Icon">
-                        <a href="#">Virtuaaltuur</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p>Üldine kirjeldus hoonest. Nt mis instituudid siin on või mis siin teha saab</p>
-    </div>
+            </section>
         </div>
     </main>
 </body>
-
 </html>

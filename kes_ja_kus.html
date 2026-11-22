@@ -8,21 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Kaisei+Decol&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Kes ja kus?</title>
+    <script src="dropdown.js"></script>
 </head>
 <body>
     <div class="header-container">
         <header id="päis">
             <div class="logo">Lehenimi ja Logo</div>
             <nav class="nav-lingid">
-                <a class="subtitle" href="#">Koduleht</a>
-                <a class="subtitle" href="#">Kes ja Kus?</a>
-                <a class="subtitle" href="#">Kõik Teemad</a>
+                <a class="subtitle" href="index.html">Avaleht</a>
+                <a class="subtitle" href="kes_ja_kus.html" aria-current="page">Kes ja kus?</a>
+                <a class="subtitle" href="koik_teemad.html">Kõik teemad</a>
             </nav>
         </header>
 
         <section id="hero">
             <h1>Kes ja kus?</h1>
-            <p>Siit leiad kontaktid ja info selle kohta, kelle poole pöörduda.</p>
+            <p>Leia oma aine õppejõud või vaata, kellelt mure korral abi küsida.</p>
         </section>
     </div>
 
@@ -30,38 +31,41 @@
         <aside id="sisukord" class="small">
             <h2>Sisukord</h2>
             <ul>
-                <li><a href="#uldine">Üldine</a></li>
+                <li><a href="#uldine">Üldised kontaktid</a></li>
                 <li><a href="#oppejoud">Õppejõud</a></li>
                 <li><a href="#abi">Kelle poole pöörduda?</a></li>
+                <li><a href="#asukohad">Asukohad</a></li>
             </ul>
         </aside>
 
         <div class="main-content">
             <div class="block" id="uldine">
-                <h2>Üldine</h2>
+                <h2>Üldised kontaktid</h2>
 
                 <div class="kontaktinfo">
                     <div class="kontaktinfo-foto"></div>
                     <div class="kontaktinfo-tekst">
                         <div>
-                            <h2>Nimi</h2>
-                            <p>Tiitel</p>
+                            <h3>Liivi Luik</h3>
+                            <p>Informaatika õppekorralduse spetsialist</p>
                         </div>
 
-                        <p class="small">Siia tuleb kirjeldus, millega ta aitab.</p>
-
+                        <p class="small">
+                            Kui sa pole kindel, mis ained esimesel semestril valida
+                            või mida teha, kui praktikumirühm on täis, kirjuta Liivile.
+                        </p>
                         <div>
                             <div class="inforida small">
-                                <img src="img/telo.svg" alt="Phone Icon">
-                                <a href="tel:+12345678">+12345678</a>
+                                <img src="img/telo.svg" alt="">
+                                <a href="tel:+3727375862">+372 737 5862</a>
                             </div>
                             <div class="inforida small">
-                                <img src="img/meil.svg" alt="Mail Icon">
-                                <a href="mailto:mail@mail">mail@mail</a>
+                                <img src="img/meil.svg" alt="">
+                                <a href="mailto:liivi.luik@ut.ee">liivi.luik@ut.ee</a>
                             </div>
                             <div class="inforida small">
-                                <img src="img/asukoht.svg" alt="Location Icon">
-                                <span>Ruum</span>
+                                <img src="img/asukoht.svg" alt="">
+                                <span>Delta, Narva mnt 18, ruum 3002</span>
                             </div>
                         </div>
                     </div>
@@ -73,24 +77,27 @@
                     <div class="kontaktinfo-foto"></div>
                     <div class="kontaktinfo-tekst">
                         <div>
-                            <h2>Nimi</h2>
-                            <p>Tiitel</p>
+                            <h3>TÜ arvutiabi</h3>
+                            <p>Abi ülikooli IT-teenustega</p>
                         </div>
 
-                        <p class="small">Siia tuleb kirjeldus, millega ta aitab.</p>
+                        <p class="small">
+                            Kui sa ei saa ÕIS-i või Moodle’isse sisse, pöördu arvutiabi poole.
+                            Sealt saad abi ka ülikooli e-posti ja eduroamiga.
+                        </p>
 
                         <div>
                             <div class="inforida small">
-                                <img src="img/telo.svg" alt="Phone Icon">
-                                <a href="tel:+12345678">+12345678</a>
+                                <img src="img/telo.svg" alt="">
+                                <a href="tel:+3727375500">+372 737 5500</a>
                             </div>
                             <div class="inforida small">
-                                <img src="img/meil.svg" alt="Mail Icon">
-                                <a href="mailto:mail@mail">mail@mail</a>
+                                <img src="img/meil.svg" alt="">
+                                <a href="mailto:arvutiabi@ut.ee">arvutiabi@ut.ee</a>
                             </div>
                             <div class="inforida small">
-                                <img src="img/asukoht.svg" alt="Location Icon">
-                                <span>Ruum</span>
+                                <img src="img/asukoht.svg" alt="">
+                                <span>Uppsala 10, Tartu</span>
                             </div>
                         </div>
                     </div>
@@ -99,27 +106,31 @@
                 <hr class="kontaktijoon">
 
                 <div class="kontaktinfo">
-                    <div class="kontaktinfo-foto"></div>
+                    <img class="kontaktinfo-foto" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Tartu_%C3%9Clikooli_raamatukogu.jpg/500px-Tartu_%C3%9Clikooli_raamatukogu.jpg" alt="" loading="lazy">
                     <div class="kontaktinfo-tekst">
                         <div>
-                            <h2>Nimi</h2>
-                            <p>Tiitel</p>
+                            <h3>TÜ raamatukogu</h3>
+                            <p>Õppimine</p>
                         </div>
 
-                        <p class="small">Siia tuleb kirjeldus, millega ta aitab.</p>
+                        <p class="small">
+                            Küsi siit abi, kui tahad lugejaks registreeruda või raamatut laenata.
+                            Rühmatööks saad ruumi
+                            <a href="https://ruum.utlib.ut.ee/">raamatukogu lehel broneerida</a>.
+                        </p>
 
                         <div>
                             <div class="inforida small">
-                                <img src="img/telo.svg" alt="Phone Icon">
-                                <a href="tel:+12345678">+12345678</a>
+                                <img src="img/telo.svg" alt="">
+                                <a href="tel:+3727375702">+372 737 5702</a>
                             </div>
                             <div class="inforida small">
-                                <img src="img/meil.svg" alt="Mail Icon">
-                                <a href="mailto:mail@mail">mail@mail</a>
+                                <img src="img/meil.svg" alt="">
+                                <a href="mailto:library@ut.ee">library@ut.ee</a>
                             </div>
                             <div class="inforida small">
-                                <img src="img/asukoht.svg" alt="Location Icon">
-                                <span>Ruum</span>
+                                <img src="img/asukoht.svg" alt="">
+                                <span>W. Struve 1, Tartu</span>
                             </div>
                         </div>
                     </div>
@@ -128,13 +139,256 @@
 
             <div class="block" id="oppejoud">
                 <h2>Õppejõud</h2>
-                <p>WIP</p>
+                <p class="small">
+                    Valik 2026/2027. õppeaasta sügissemestri aineid.
+                    Oma rühma juhendaja leiad <a href="https://ois2.ut.ee/">ÕIS-ist</a>.
+                </p>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kõrgem matemaatika I (alused) (LTMS.00.062)
+                    </button>
+                    <div class="dropdown-content" id="matemaatika">
+                        <div class="kontaktinfo">
+                            <div class="kontaktinfo-foto"></div>
+                            <div class="kontaktinfo-tekst">
+                                <h3>Natalia Saealle</h3>
+                                <p class="small">Vastutav õppejõud</p>
+                                <div class="inforida small">
+                                    <img src="img/meil.svg" alt="">
+                                    <a href="mailto:natalia.saealle@ut.ee">natalia.saealle@ut.ee</a>
+                                </div>
+                                <p class="small"><a href="https://ois2.ut.ee/#/courses/LTMS.00.062/version/867de417-8d05-21c3-2a35-42c67df75d6c">Aine info ja teised õppejõud</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Arvuti arhitektuur ja riistvara I (LOFY.03.079)
+                    </button>
+                    <div class="dropdown-content" id="riistvara">
+                        <div class="kontaktinfo">
+                            <img class="kontaktinfo-foto" src="https://fi.ut.ee/sites/default/files/styles/ckeditor_960_x_709/public/2022-01/Toomas_2021.png?itok=q-uAAH73" alt="" loading="lazy">
+                            <div class="kontaktinfo-tekst">
+                                <h3>Toomas Plank</h3>
+                                <p class="small">Vastutav õppejõud</p>
+                                <div class="inforida small">
+                                    <img src="img/meil.svg" alt="">
+                                    <a href="mailto:toomas.plank@ut.ee">toomas.plank@ut.ee</a>
+                                </div>
+                                <p class="small"><a href="https://ois2.ut.ee/#/courses/LOFY.03.079/version/02f88bd1-66a5-ee6a-3c61-cb9b839eb9d0">Aine info ja teised õppejõud</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Programmeerimine (LTAT.03.001)
+                    </button>
+                    <div class="dropdown-content" id="programmeerimine">
+                        <div class="kontaktinfo">
+                            <img class="kontaktinfo-foto" src="https://blog.cs.ut.ee/wp-content/uploads/2021/06/Tauno-Palts-819x1024.jpg" alt="" loading="lazy">
+                            <div class="kontaktinfo-tekst">
+                                <h3>Tauno Palts</h3>
+                                <p class="small">Vastutav õppejõud</p>
+                                <div class="inforida small">
+                                    <img src="img/meil.svg" alt="">
+                                    <a href="mailto:tauno.palts@ut.ee">tauno.palts@ut.ee</a>
+                                </div>
+                                <p class="small"><a href="https://courses.cs.ut.ee/2026/programmeerimine/fall">Aine info ja teised õppejõud</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Sissejuhatus erialasse (LTAT.03.002)
+                    </button>
+                    <div class="dropdown-content" id="sissejuhatus">
+                        <div class="kontaktinfo">
+                            <img class="kontaktinfo-foto" src="https://cs.ut.ee/sites/default/files/styles/ut_content_main_medium/public/2025-02/Mirjam%20Paales.jpg?h=a86a8f99&amp;itok=YuLA_j9s" alt="" loading="lazy">
+                            <div class="kontaktinfo-tekst">
+                                <h3>Mirjam Paales</h3>
+                                <p class="small">Vastutav õppejõud</p>
+                                <div class="inforida small">
+                                    <img src="img/meil.svg" alt="">
+                                    <a href="mailto:mirjam.paales@ut.ee">mirjam.paales@ut.ee</a>
+                                </div>
+                                <p class="small"><a href="https://ois2.ut.ee/#/courses/LTAT.03.002/version/13fd2e72-97b4-cb70-0232-943263216603">Aine info ja teised õppejõud</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Operatsioonisüsteemid (LTAT.06.001)
+                    </button>
+                    <div class="dropdown-content" id="opsusteemid">
+                        <div class="kontaktinfo">
+                            <img class="kontaktinfo-foto" src="https://its.cs.ut.ee/home/_astro/artjom-lind.BKLu4H1E_Z13aiiJ.webp" alt="" loading="lazy">
+                            <div class="kontaktinfo-tekst">
+                                <h3>Artjom Lind</h3>
+                                <p class="small">Loengud ja aine korraldus</p>
+                                <div class="inforida small">
+                                    <img src="img/meil.svg" alt="">
+                                    <a href="mailto:artjom.lind@ut.ee">artjom.lind@ut.ee</a>
+                                </div>
+                                <p class="small"><a href="https://courses.cs.ut.ee/2026/os/fall">Aine info ja teised õppejõud</a> · Praktikumide kohta küsi Alo Peetsilt, <a href="mailto:alo.peets@ut.ee">alo.peets@ut.ee</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="block" id="abi">
-                <h2>Kelle poole pöörduda?</h2>
-                <p>WIP</p>
+                <h2>Kelle poole või kuhu pöörduda?</h2>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Ma ei saa ÕIS-i või Moodle’isse sisse
+                    </button>
+                    <div class="dropdown-content" id="mure-sisselogimine">
+                        <p>Proovi oma TÜ kasutajakontoga sisse logida. Kui sisselogimine ikka ei õnnestu, kirjuta <a href="mailto:arvutiabi@ut.ee">arvutiabi@ut.ee</a>. Pane kirja, mis keskkonnas viga tekkis ja mida veateade ütleb.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Praktikumirühm on täis
+                    </button>
+                    <div class="dropdown-content" id="mure-rühm">
+                        <p>Vaata <a href="https://ois2.ut.ee/">ÕIS-ist</a>, kas samas aines on mõni teine sobiv rühm. Kui ükski aeg ei sobi või registreerimine ei õnnestu, kirjuta <a href="mailto:liivi.luik@ut.ee">liivi.luik@ut.ee</a>. Lisa aine kood ja rühm, kuhu soovid minna.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Ma ei saa praktikumi ülesandest aru
+                    </button>
+                    <div class="dropdown-content" id="mure-ulesanne">
+                        <p>Küsi oma rühma juhendajalt. Tema nime leiad ÕIS-is aine õppejõudude juurest või kursuse lehelt. Kui kirjutad, ütle, millise ülesande juures kinni jäid ja mida sa juba proovisid.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Ma ei tea, kellelt abi küsida
+                    </button>
+                    <div class="dropdown-content" id="mure-kohanemine">
+                        <p>Alusta oma <a href="https://ut.ee/et/sisu/tugi-tuutorilt">tuutorist</a>. Ta aitab esimeste nädalate praktiliste küsimustega. Õppetoetuste või õppetöö kohanduste kohta saad nõu <a href="https://ut.ee/et/noustamiskeskus">TÜ nõustamiskeskusest</a>.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Mul on Tartus elukohta vaja
+                    </button>
+                    <div class="dropdown-content" id="mure-uhiselamu">
+                        <p>Ühiselamukohta saad taotleda <a href="https://www.campus.ee/kohataotlejale/">Tartu Üliõpilasküla lehel</a>. Sealt leiad ka taotlemise juhise ja jooksva info kohtade kohta.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kust saan tudengikaardi?
+                    </button>
+                    <div class="dropdown-content" id="mure-tudengikaart">
+                        <p>ISIC-kaardi tellimise juhise leiad <a href="https://ut.ee/et/sisu/uliopilaspilet">TÜ üliõpilaspileti lehelt</a>.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Mida teha, kui olen jäänud haigeks?
+                    </button>
+                    <div class="dropdown-content" id="mure-haigestumine">
+                        <p>
+                            Teata puudumisest võimalikult kiiresti aine õppejõule ja lepi temaga kokku, kuidas saad kohustusliku praktikumi, kontrolltöö või muu ülesande järele teha. Täpsed osalemis- ja hindamisreeglid on kirjas <a href="https://ois2.ut.ee/">ÕIS-is</a> õppeaine infos.
+                            <br><br>
+                            Kui jääd haiguse tõttu eksamilt või arvestuselt eemale, esita mõjuvat põhjust tõendav dokument õppeprodekaanile või instituudi juhatajale viie tööpäeva jooksul. Siis saab ÕIS-i märke „mitteilmunud“ tühistada. <a href="https://ut.ee/et/sisu/eksamid-ja-arvestused#accordion-67a0b671-db63-4d0d-a6b4-42006b483e24">Vaata TÜ eksamite ja arvestuste korda.</a>
+                            <br><br>
+                            Pikema haiguse korral saad taotleda tervislikel põhjustel akadeemilist puhkust. Selleks on vaja arstitõendit ning avaldus tuleb esitada loodus- ja täppisteaduste valdkonna dekanaati aadressil ltt@ut.ee hiljemalt puhkuse algusele eelneval päeval. <a href="https://ut.ee/et/sisu/akadeemiline-puhkus">Vaata akadeemilise puhkuse tingimusi ja avaldust.</a>
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Soovin minna õpirändele
+                    </button>
+                    <div class="dropdown-content" id="mure-õpiränne">
+                        <p>
+                            Esmalt, tutvu Tartu Ülikooli õpirände võimaluste ja käimasolevate konkurssidega ning leia <a href="https://saas.solenovo.fi/move/login/UT">SoleMove’i</a> kaudu sobiv partnerülikool.
+                            <br><br>
+                            Kandideerimiseks esita SoleMove’is avaldus, motivatsioonikiri, õppetulemuste tõend ja õppekeele oskust kinnitav dokument. Enne kandideerimist kontrolli, et välisülikooli õppeained sobiksid sinu informaatika õppekavasse.
+                            <br><br>
+                            <a>Täpsem info on meie "Kõik Teemad" lehel.</a>
+                            <br><br>
+                            Küsimuste korral võib pöörduda Merilin Piirmannini
+                            <br><br>
+
+                            <div class="kontaktinfo">
+                                <svg class="kontaktinfo-foto" viewBox="0 0 80 80" role="img">
+                                    <circle cx="40" cy="40" r="40" fill="#eaeaea" />
+                                </svg>
+                                <div class="kontaktinfo-tekst">
+                                    <div>
+                                        <h2>Merilin Piirmann</h2>
+                                        <p>Õppekorralduse ja akadeemilise mobiilsuse spetsialist</p>
+                                    </div>
+
+                                    <p class="small">Annab tudengitele nõu, kuidas õpirändele saada ja mida silmas pidada</p>
+
+                                    <div>
+                                        <div class="inforida small">
+                                            <img src="img/telo.svg" alt="Phone Icon">
+                                            <a href="tel:+3727375864">+37 2737 5864</a>
+                                        </div>
+                                        <div class="inforida small">
+                                            <img src="img/meil.svg" alt="Mail Icon">
+                                            <a href="mailto:merilin.piirmann@ut.ee">merilin.piirmann@ut.ee</a>
+                                        </div>
+                                        <div class="inforida small">
+                                            <img src="img/asukoht.svg" alt="Location Icon">
+                                            <span>Delta 3002 E-R 09-14</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </p>
+                    </div>
+                </div>
+
             </div>
+
+            <section class="block" id="asukohad">
+                <h2>Asukohad</h2>
+                <div class="asukohainfo">
+                    <img class="asukohainfo-foto" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Tartu_%C3%9Clikooli_Delta_keskus.jpg/960px-Tartu_%C3%9Clikooli_Delta_keskus.jpg" alt="Delta õppehoone" loading="lazy">
+                    <div>
+                        <h3>Delta õppehoone</h3>
+                        <p>Narva mnt 18, Tartu</p>
+                        <p class="small">
+                            <a href="https://commons.wikimedia.org/wiki/File:Tartu_%C3%9Clikooli_Delta_keskus.jpg"></a>
+                            <a href="https://creativecommons.org/licenses/by/4.0/"></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="asukohainfo">
+                    <img class="asukohainfo-foto" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Tartu_%C3%9Clikooli_raamatukogu.jpg/500px-Tartu_%C3%9Clikooli_raamatukogu.jpg" alt="TÜ raamatukogu trepikoda" loading="lazy">
+                    <div>
+                        <h3>TÜ raamatukogu</h3>
+                        <p>W. Struve 1, Tartu</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 </body>
