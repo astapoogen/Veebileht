@@ -576,12 +576,6 @@ main {
   }
 }
 
-.dropdown-content p a {
-    display: inline;
-    padding: 0;
-    text-decoration: underline;
-}
-
 .kontaktinfo h3,
 .asukohainfo h3 {
     font-family: 'Inter', sans-serif;
