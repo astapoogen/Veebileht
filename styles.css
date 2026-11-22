@@ -374,7 +374,8 @@ main {
   background-color: var(--white);
 }
 
-.kontaktinfo-title h2, .asukohainfo h2 {
+.kontaktinfo-title h2,
+.asukohainfo h2 {
   color: var(--black);
   transition:
     font-size 200ms ease,
@@ -382,17 +383,11 @@ main {
     font-weight 200ms ease;
 }
 
-.kontaktinfo:hover .kontaktinfo-title h2, .asukohainfo:hover h2 {
+.kontaktinfo:hover .kontaktinfo-title h2,
+.asukohainfo:hover h2 {
   font-weight: 700;
   font-size: var(--title-font-size);
   line-height: 56px;
-}
-
-.kontaktijoon {
-    width: 100%;
-    margin: 0;
-    border: 0;
-    border-top: 1px solid #999;
 }
 
 .kontaktinfo-foto {
