@@ -201,12 +201,11 @@ main {
   display:flex;
 }
 
-/* Full-width scrolling area */
+/* Timeline scrolling area */
 .timeline-container {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    margin-left: -50vw;
+    position: static;
+    width: 100%;
+    margin: 0;
     overflow-x: auto;
 
     /* Keeps the scrollbar away from the events */
@@ -217,17 +216,16 @@ main {
 .timeline-spacing {
     display: flex;
     width: max-content;
-
-    /* Aligns timeline with the 800px content column */
-    padding-left: max(24px, calc((100vw - 800px) / 2));
-    padding-right: max(24px, calc((100vw - 800px) / 2));
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-/* One line section containing two events */
+/* One line section containing an event */
 .timeline-segment {
     position: relative;
-    width: 260px;
-    height: 128px;
+    width: 160px;
+    height: 200px;
     flex-shrink: 0;
 }
 
@@ -247,6 +245,7 @@ main {
 .timeline-node {
     position: absolute;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     display: flex;
@@ -273,15 +272,6 @@ main {
     top: -16px;
 }
 
-/* Give the two events in each segment separate positions */
-.timeline-node.top {
-    left: 25%;
-}
-
-.timeline-node.bottom {
-    left: 75%;
-}
-
 /* Timeline dot */
 .timeline-node .dot {
     width: 16px;
@@ -294,15 +284,16 @@ main {
         background-color 200ms ease;
 }
 
-/* Event label: starts at .small (14px / 16px) */
+/* Event label */
 .timeline-node .label {
     position: absolute;
-    width: max-content;
-    white-space: nowrap;
+    width: 150px;
+    white-space: normal;
+    text-align: center;
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
     color: var(--quaternary);
     transition:
         top 200ms ease,
@@ -357,11 +348,11 @@ main {
     box-shadow: none;
 }
 
-/* Transition from Small typography to Paragraph typography */
+/* Hovered timeline label */
 .timeline-node:hover .label,
 .timeline-node:focus-visible .label {
-    font-size: var(--paragraph-font-size);
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 18px;
     font-weight: 400;
     color: var(--black);
 }
@@ -568,46 +559,7 @@ main {
   width: 100%;
 }
 
-@media (max-width: 800px) {
-
-  #sisukord {
-    position: static;
-    width: 100%;
-  }
-}
-
 .kontaktinfo h3,
 .asukohainfo h3 {
     font-family: 'Inter', sans-serif;
-}
-
-
-/*ajatelg*/
-#kuupaevad .timeline-container {
-  position: static;
-  width: 100%;
-  margin: 0;
-}
-
-#kuupaevad .timeline-spacing {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#kuupaevad .timeline-segment {
-  width: 160px;
-  height: 200px;
-}
-
-#kuupaevad .timeline-node {
-  left: 50%;
-}
-
-#kuupaevad .label {
-  width: 150px;
-  font-size: 16px;
-  line-height: 18px;
-  white-space: normal;
-  text-align: center;
 }
