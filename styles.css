@@ -417,3 +417,34 @@ main {
 .asukohainfo h3 {
     font-family: 'Inter', sans-serif;
 }
+
+
+/*ajatelg*/
+#kuupaevad .timeline-container {
+  position: static;
+  width: 100%;
+  margin: 0;
+}
+
+#kuupaevad .timeline-spacing {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#kuupaevad .timeline-segment {
+  width: 160px;
+  height: 200px;
+}
+
+#kuupaevad .timeline-node {
+  left: 50%;
+}
+
+#kuupaevad .label {
+  width: 150px;
+  font-size: 16px;
+  line-height: 18px;
+  white-space: normal;
+  text-align: center;
+}
