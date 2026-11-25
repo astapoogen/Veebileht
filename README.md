@@ -14,4 +14,4 @@
 * Joonas
 * Marta
 
-* Tööjaotus oli suuremalt jaolt võrdselt jaotatud, Aronile jäi peamiselt disain - seetõttu jäi Joonasele ja Martale rohkem sisu materjali otsimine.
+### Tööjaotus oli suuremalt jaolt võrdselt jaotatud, Aronile jäi peamiselt disain - seetõttu jäi Joonasele ja Martale rohkem sisu materjali otsimine.
