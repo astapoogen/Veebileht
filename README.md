@@ -1,4 +1,4 @@
-# Veebileht informaatikatudengile
+## Veebileht informaatikatudengile
 
 * Veebileht aitab Tartu Ülikooli informaatika esmakursuslastel leida kiiresti ja mugavalt infot, mida neil 1. semestril vaja läheb. Meie eesmärk on hoida sisu võimalikult lihtsa ja selgena, viidates otse õigesse kohta.
 
@@ -9,7 +9,7 @@
 * **Üldine info** – olulised kontaktid, majaplaan ja vajalikud veebikeskkonnad.
 * **Kõik teemad** – tudengite küsimused ja vastused, mured ning muud teemad.
 
-# Tiimiliikmed
+## Tiimiliikmed
 * Aron
 * Joonas
 * Marta
