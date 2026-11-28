@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Kes ja kus?</title>
     <script src="dropdown.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Kaisei+Decol&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Kes ja Kus?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header-container">
@@ -18,7 +21,7 @@
             </nav>
         </header>
 
-        <section id="hero">
+        <section id="hero" class="paisefoto kontaktide-pais">
             <h1>Kes ja kus?</h1>
             <p>Leia oma aine õppejõud või vaata, kellelt mure korral abi küsida.</p>
         </section>
@@ -40,10 +43,10 @@
                 <h2>Üldised kontaktid</h2>
 
                 <div class="kontaktinfo">
-                    <div class="kontaktinfo-foto"></div>
+                    <img class="kontaktinfo-foto" src="img/liivi-luik.svg" alt="">
                     <div class="kontaktinfo-tekst">
-                        <div>
-                            <h3>Liivi Luik</h3>
+                        <div class="kontaktinfo-title">
+                            <h2>Liivi Luik</h2>
                             <p>Informaatika õppekorralduse spetsialist</p>
                         </div>
 
@@ -51,7 +54,7 @@
                             Kui sa pole kindel, mis ained esimesel semestril valida
                             või mida teha, kui praktikumirühm on täis, kirjuta Liivile.
                         </p>
-                        <div>
+                        <div class="inforida-container">
                             <div class="inforida small">
                                 <img src="img/telo.svg" alt="">
                                 <a href="tel:+3727375862">+372 737 5862</a>
@@ -62,19 +65,17 @@
                             </div>
                             <div class="inforida small">
                                 <img src="img/asukoht.svg" alt="">
-                                <span>Delta, Narva mnt 18, ruum 3002</span>
+                                <a href="https://maps.app.goo.gl/sXPDa7MjWFLiJxYY8">Delta, Narva mnt 18, ruum 3002</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <hr class="kontaktijoon">
-
                 <div class="kontaktinfo">
-                    <div class="kontaktinfo-foto"></div>
+                    <img class="kontaktinfo-foto" src="img/tu-arvutiabi.svg" alt="">
                     <div class="kontaktinfo-tekst">
-                        <div>
-                            <h3>TÜ arvutiabi</h3>
+                        <div class="kontaktinfo-title">
+                            <h2>TÜ arvutiabi</h2>
                             <p>Abi ülikooli IT-teenustega</p>
                         </div>
 
@@ -83,7 +84,7 @@
                             Sealt saad abi ka ülikooli e-posti ja eduroamiga.
                         </p>
 
-                        <div>
+                        <div class="inforida-container">
                             <div class="inforida small">
                                 <img src="img/telo.svg" alt="">
                                 <a href="tel:+3727375500">+372 737 5500</a>
@@ -94,19 +95,17 @@
                             </div>
                             <div class="inforida small">
                                 <img src="img/asukoht.svg" alt="">
-                                <span>Uppsala 10, Tartu</span>
+                                <a href="https://maps.app.goo.gl/b54mFBEQcWSuMXCe6">Uppsala 10, Tartu</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <hr class="kontaktijoon">
-
                 <div class="kontaktinfo">
-                    <img class="kontaktinfo-foto" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Tartu_%C3%9Clikooli_raamatukogu.jpg/500px-Tartu_%C3%9Clikooli_raamatukogu.jpg" alt="" loading="lazy">
+                    <img class="kontaktinfo-foto" src="img/raamatukogu.webp" alt="" loading="lazy">
                     <div class="kontaktinfo-tekst">
-                        <div>
-                            <h3>TÜ raamatukogu</h3>
+                        <div class="kontaktinfo-title">
+                            <h2>TÜ raamatukogu</h2>
                             <p>Õppimine</p>
                         </div>
 
@@ -116,7 +115,7 @@
                             <a href="https://ruum.utlib.ut.ee/">raamatukogu lehel broneerida</a>.
                         </p>
 
-                        <div>
+                        <div class="inforida-container">
                             <div class="inforida small">
                                 <img src="img/telo.svg" alt="">
                                 <a href="tel:+3727375702">+372 737 5702</a>
@@ -127,7 +126,7 @@
                             </div>
                             <div class="inforida small">
                                 <img src="img/asukoht.svg" alt="">
-                                <span>W. Struve 1, Tartu</span>
+                                <a href="https://maps.app.goo.gl/b2VxZ5bqE41njMEYA">W. Struve 1, Tartu</a>
                             </div>
                         </div>
                     </div>
@@ -147,13 +146,17 @@
                     </button>
                     <div class="dropdown-content" id="matemaatika">
                         <div class="kontaktinfo">
-                            <div class="kontaktinfo-foto"></div>
+                            <img class="kontaktinfo-foto" src="img/natalia-saealle.svg" alt="">
                             <div class="kontaktinfo-tekst">
-                                <h3>Natalia Saealle</h3>
-                                <p class="small">Vastutav õppejõud</p>
-                                <div class="inforida small">
-                                    <img src="img/meil.svg" alt="">
-                                    <a href="mailto:natalia.saealle@ut.ee">natalia.saealle@ut.ee</a>
+                                <div class="kontaktinfo-title">
+                                    <h2>Natalia Saealle</h2>
+                                    <p class="small">Vastutav õppejõud</p>
+                                </div>
+                                <div class="inforida-container">
+                                    <div class="inforida small">
+                                        <img src="img/meil.svg" alt="">
+                                        <a href="mailto:natalia.saealle@ut.ee">natalia.saealle@ut.ee</a>
+                                    </div>
                                 </div>
                                 <p class="small"><a href="https://ois2.ut.ee/#/courses/LTMS.00.062/version/867de417-8d05-21c3-2a35-42c67df75d6c">Aine info ja teised õppejõud</a></p>
                             </div>
@@ -167,13 +170,17 @@
                     </button>
                     <div class="dropdown-content" id="riistvara">
                         <div class="kontaktinfo">
-                            <img class="kontaktinfo-foto" src="https://fi.ut.ee/sites/default/files/styles/ckeditor_960_x_709/public/2022-01/Toomas_2021.png?itok=q-uAAH73" alt="" loading="lazy">
+                            <img class="kontaktinfo-foto" src="img/toomas.webp" alt="" loading="lazy">
                             <div class="kontaktinfo-tekst">
-                                <h3>Toomas Plank</h3>
-                                <p class="small">Vastutav õppejõud</p>
-                                <div class="inforida small">
-                                    <img src="img/meil.svg" alt="">
-                                    <a href="mailto:toomas.plank@ut.ee">toomas.plank@ut.ee</a>
+                                <div class="kontaktinfo-title">
+                                    <h2>Toomas Plank</h2>
+                                    <p class="small">Vastutav õppejõud</p>
+                                </div>
+                                <div class="inforida-container">
+                                    <div class="inforida small">
+                                        <img src="img/meil.svg" alt="">
+                                        <a href="mailto:toomas.plank@ut.ee">toomas.plank@ut.ee</a>
+                                    </div>
                                 </div>
                                 <p class="small"><a href="https://ois2.ut.ee/#/courses/LOFY.03.079/version/02f88bd1-66a5-ee6a-3c61-cb9b839eb9d0">Aine info ja teised õppejõud</a></p>
                             </div>
@@ -187,13 +194,17 @@
                     </button>
                     <div class="dropdown-content" id="programmeerimine">
                         <div class="kontaktinfo">
-                            <img class="kontaktinfo-foto" src="https://blog.cs.ut.ee/wp-content/uploads/2021/06/Tauno-Palts-819x1024.jpg" alt="" loading="lazy">
+                            <img class="kontaktinfo-foto" src="img/tauno.webp" alt="" loading="lazy">
                             <div class="kontaktinfo-tekst">
-                                <h3>Tauno Palts</h3>
-                                <p class="small">Vastutav õppejõud</p>
-                                <div class="inforida small">
-                                    <img src="img/meil.svg" alt="">
-                                    <a href="mailto:tauno.palts@ut.ee">tauno.palts@ut.ee</a>
+                                <div class="kontaktinfo-title">
+                                    <h2>Tauno Palts</h2>
+                                    <p class="small">Vastutav õppejõud</p>
+                                </div>
+                                <div class="inforida-container">
+                                    <div class="inforida small">
+                                        <img src="img/meil.svg" alt="">
+                                        <a href="mailto:tauno.palts@ut.ee">tauno.palts@ut.ee</a>
+                                    </div>
                                 </div>
                                 <p class="small"><a href="https://courses.cs.ut.ee/2026/programmeerimine/fall">Aine info ja teised õppejõud</a></p>
                             </div>
@@ -207,13 +218,17 @@
                     </button>
                     <div class="dropdown-content" id="sissejuhatus">
                         <div class="kontaktinfo">
-                            <img class="kontaktinfo-foto" src="https://cs.ut.ee/sites/default/files/styles/ut_content_main_medium/public/2025-02/Mirjam%20Paales.jpg?h=a86a8f99&amp;itok=YuLA_j9s" alt="" loading="lazy">
+                            <img class="kontaktinfo-foto" src="img/mirjam.webp" alt="" loading="lazy">
                             <div class="kontaktinfo-tekst">
-                                <h3>Mirjam Paales</h3>
-                                <p class="small">Vastutav õppejõud</p>
-                                <div class="inforida small">
-                                    <img src="img/meil.svg" alt="">
-                                    <a href="mailto:mirjam.paales@ut.ee">mirjam.paales@ut.ee</a>
+                                <div class="kontaktinfo-title">
+                                    <h2>Mirjam Paales</h2>
+                                    <p class="small">Vastutav õppejõud</p>
+                                </div>
+                                <div class="inforida-container">
+                                    <div class="inforida small">
+                                        <img src="img/meil.svg" alt="">
+                                        <a href="mailto:mirjam.paales@ut.ee">mirjam.paales@ut.ee</a>
+                                    </div>
                                 </div>
                                 <p class="small"><a href="https://ois2.ut.ee/#/courses/LTAT.03.002/version/13fd2e72-97b4-cb70-0232-943263216603">Aine info ja teised õppejõud</a></p>
                             </div>
@@ -227,13 +242,17 @@
                     </button>
                     <div class="dropdown-content" id="opsusteemid">
                         <div class="kontaktinfo">
-                            <img class="kontaktinfo-foto" src="https://its.cs.ut.ee/home/_astro/artjom-lind.BKLu4H1E_Z13aiiJ.webp" alt="" loading="lazy">
+                            <img class="kontaktinfo-foto" src="img/artjom.webp" alt="" loading="lazy">
                             <div class="kontaktinfo-tekst">
-                                <h3>Artjom Lind</h3>
-                                <p class="small">Loengud ja aine korraldus</p>
-                                <div class="inforida small">
-                                    <img src="img/meil.svg" alt="">
-                                    <a href="mailto:artjom.lind@ut.ee">artjom.lind@ut.ee</a>
+                                <div class="kontaktinfo-title">
+                                    <h2>Artjom Lind</h2>
+                                    <p class="small">Loengud ja aine korraldus</p>
+                                </div>
+                                <div class="inforida-container">
+                                    <div class="inforida small">
+                                        <img src="img/meil.svg" alt="">
+                                        <a href="mailto:artjom.lind@ut.ee">artjom.lind@ut.ee</a>
+                                    </div>
                                 </div>
                                 <p class="small"><a href="https://courses.cs.ut.ee/2026/os/fall">Aine info ja teised õppejõud</a> · Praktikumide kohta küsi Alo Peetsilt, <a href="mailto:alo.peets@ut.ee">alo.peets@ut.ee</a></p>
                             </div>
@@ -315,7 +334,7 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown" id="piirmann">
                     <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
                         <img src="img/chevron.svg" alt=""> Soovin minna õpirändele
                     </button>
@@ -325,27 +344,25 @@
                             <br><br>
                             Kandideerimiseks esita SoleMove’is avaldus, motivatsioonikiri, õppetulemuste tõend ja õppekeele oskust kinnitav dokument. Enne kandideerimist kontrolli, et välisülikooli õppeained sobiksid sinu informaatika õppekavasse.
                             <br><br>
-                            <a>Täpsem info on meie "Kõik Teemad" lehel.</a>
+                            <a href="koik_teemad.html#õpiränne">Täpsem info on meie "Kõik Teemad" lehel.</a>
                             <br><br>
                             Küsimuste korral võib pöörduda Merilin Piirmannini
                             <br><br>
-
+                    </p>
                             <div class="kontaktinfo">
-                                <svg class="kontaktinfo-foto" viewBox="0 0 80 80" role="img">
-                                    <circle cx="40" cy="40" r="40" fill="#eaeaea" />
-                                </svg>
+                                <img class="kontaktinfo-foto" src="img/merilin-piirmann.svg" alt="">
                                 <div class="kontaktinfo-tekst">
-                                    <div>
+                                    <div class="kontaktinfo-title">
                                         <h2>Merilin Piirmann</h2>
                                         <p>Õppekorralduse ja akadeemilise mobiilsuse spetsialist</p>
                                     </div>
 
                                     <p class="small">Annab tudengitele nõu, kuidas õpirändele saada ja mida silmas pidada</p>
 
-                                    <div>
+                                    <div class="inforida-container">
                                         <div class="inforida small">
                                             <img src="img/telo.svg" alt="Phone Icon">
-                                            <a href="tel:+3727375864">+37 2737 5864</a>
+                                            <a href="tel:+3727375864">+372 737 5864</a>
                                         </div>
                                         <div class="inforida small">
                                             <img src="img/meil.svg" alt="Mail Icon">
@@ -353,13 +370,13 @@
                                         </div>
                                         <div class="inforida small">
                                             <img src="img/asukoht.svg" alt="Location Icon">
-                                            <span>Delta 3002 E-R 09-14</span>
+                                            <a href="https://maps.app.goo.gl/sXPDa7MjWFLiJxYY8">Delta, Narva mnt 18, ruum 3002 E-R 09-14</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                        </p>
+                        
                     </div>
                 </div>
 
@@ -368,21 +385,35 @@
             <section class="block" id="asukohad">
                 <h2>Asukohad</h2>
                 <div class="asukohainfo">
-                    <img class="asukohainfo-foto" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Tartu_%C3%9Clikooli_Delta_keskus.jpg/960px-Tartu_%C3%9Clikooli_Delta_keskus.jpg" alt="Delta õppehoone" loading="lazy">
-                    <div>
-                        <h3>Delta õppehoone</h3>
-                        <p>Narva mnt 18, Tartu</p>
-                        <p class="small">
-                            <a href="https://commons.wikimedia.org/wiki/File:Tartu_%C3%9Clikooli_Delta_keskus.jpg"></a>
-                            <a href="https://creativecommons.org/licenses/by/4.0/"></a>
-                        </p>
+                    <img class="asukohainfo-foto" src="img/delta.webp" alt="Delta õppehoone" loading="lazy">
+                    <div class="asukohainfo-tekst">
+                        <h2>Delta õppehoone</h2>
+                        <div class="inforida-container">
+                            <div class="inforida small">
+                                <img src="img/asukoht.svg" alt="Location Icon">
+                                <a href="https://maps.app.goo.gl/sXPDa7MjWFLiJxYY8">Narva mnt 18, Tartu</a>
+                            </div>
+                            <div class="inforida small">
+                                <img src="img/veebituur.svg" alt="Web-tour Icon">
+                                <a href="https://virtualtour.ut.ee/en/delta-center-narva-street?i=sg24">Virtuaaltuur</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="asukohainfo">
-                    <img class="asukohainfo-foto" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Tartu_%C3%9Clikooli_raamatukogu.jpg/500px-Tartu_%C3%9Clikooli_raamatukogu.jpg" alt="TÜ raamatukogu trepikoda" loading="lazy">
-                    <div>
-                        <h3>TÜ raamatukogu</h3>
-                        <p>W. Struve 1, Tartu</p>
+                    <img class="asukohainfo-foto" src="img/raamatukogu.webp" alt="TÜ raamatukogu trepikoda" loading="lazy">
+                    <div class="asukohainfo-tekst">
+                        <h2>TÜ raamatukogu</h2>
+                        <div class="inforida-container">
+                            <div class="inforida small">
+                                <img src="img/asukoht.svg" alt="Location Icon">
+                                <a href="https://maps.app.goo.gl/b2VxZ5bqE41njMEYA">W. Struve 1, Tartu</a>
+                            </div>
+                            <div class="inforida small">
+                                <img src="img/veebituur.svg" alt="Web-tour Icon">
+                                <a href="https://virtualtour.ut.ee/en/tartu-university-library?i=sg37">Virtuaaltuur</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

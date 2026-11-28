@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dropdown.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Kaisei+Decol&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Koduleht</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="dropdown.js" defer></script>
 </head>
 <body>
     <div class="header-container">
         <header id="päis">
             <div class="logo">Lehenimi ja Logo</div>
             <nav class="nav-lingid">
-                <a class="subtitle" href="#">Koduleht</a>
-                <a class="subtitle" href="#">Kes ja Kus?</a>
-                <a class="subtitle" href="#">Kõik Teemad</a>
+                <a class="subtitle" href="index.html">Koduleht</a>
+                <a class="subtitle" href="kes_ja_kus.html">Kes ja Kus?</a>
+                <a class="subtitle" href="koik_teemad.html">Kõik Teemad</a>
             </nav>
         </header>
 
-        <section id="hero">
+        <section id="hero" class="paisefoto kodulehe-pais">
             <h1>Koduleht</h1>
             <p>Esimene semester Tartu Ülikooli informaatikas</p>
         </section>
@@ -38,18 +41,17 @@
         </aside>
 
         <div class="main-content">
-            <section class="block" id="sissejuhatus">
+            <div class="block" id="sissejuhatus">
                 <h2>Sissejuhatus</h2>
                 <p>Tere tulemast Tartu Ülikooli informaatika erialale! Avalehelt leiad esimese semestri tähtajad, info tudengiürituste kohta ja vastused sagedastele küsimustele.</p>
                 <p>Kasuta sisukorda, et liikuda otse sobiva jaotiseni. Õppejõudude kontaktid ja hoonete info leiad lehelt <a href="kes_ja_kus.html">„Kes ja kus?“</a>. Transpordi, ainepunktide ja muude teemade kohta loe lehelt <a href="koik_teemad.html">„Kõik teemad“</a>.</p>
-                <figure class="small">
-            </section>
+            </div>
 
-            <section class="block" id="kuupaevad">
+            <div class="block" id="kuupaevad">
                 <h2>Tähtsad kuupäevad</h2>
                 <p>2026/2027. õppeaasta. Ajajoont saab kerida paremale.</p>
                 <div class="timeline-container" tabindex="0" role="region" aria-label="Esimese semestri ajajoon">
-                    <ol class="timeline-spacing" role="list">
+                    <ol class="timeline-spacing">
                         <li class="timeline-segment">
                             <div class="timeline-line" aria-hidden="true"></div>
                             <div class="timeline-node top">
@@ -68,14 +70,14 @@
                             <div class="timeline-line" aria-hidden="true"></div>
                             <div class="timeline-node top">
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="label small"><strong><time datetime="2026-09-14T23:59">14.09.2026<br>kell 23.59</time></strong><br>Sügisainete valimise tähtaeg</span>
+                                <span class="label small"><strong><time datetime="2026-09-14T23:59">14.09.2026</time></strong><br>Sügisainete valimise tähtaeg</span>
                             </div>
                         </li>
                         <li class="timeline-segment">
                             <div class="timeline-line" aria-hidden="true"></div>
                             <div class="timeline-node bottom">
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="label small"><strong><time datetime="2026-12-15T21:00">15.12.2026<br>kell 21.00</time></strong><br>Kevadainete valik algab</span>
+                                <span class="label small"><strong><time datetime="2026-12-15T21:00">15.12.2026</time></strong><br>Kevadainete valik algab</span>
                             </div>
                         </li>
                         <li class="timeline-segment">
@@ -96,7 +98,7 @@
                             <div class="timeline-line" aria-hidden="true"></div>
                             <div class="timeline-node top">
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="label small"><strong><time datetime="2027-02-07T23:59">07.02.2027<br>kell 23.59</time></strong><br>Kevadainete valimise tähtaeg</span>
+                                <span class="label small"><strong><time datetime="2027-02-07T23:59">07.02.2027</time></strong><br>Kevadainete valimise tähtaeg</span>
                             </div>
                         </li>
                         <li class="timeline-segment">
@@ -112,17 +114,17 @@
                     <a href="https://ut.ee/et/sisu/esimese-semestri-tahtsad-kuupaevad">Esimese semestri tähtajad</a> ·
                     <a href="https://majandus.ut.ee/sites/default/files/2026-04/Akadeemiline%20kalender%202026_2027.pdf">TÜ akadeemiline kalender (PDF)</a>
                 </p>
-            </section>
+            </div>
 
-            <section class="block" id="uritused">
+            <div class="block" id="uritused">
                 <h2>Tudengiüritused</h2>
                 <p><strong>Retsimine ehk rebaste ristimine.</strong> Kui sinu kursusele korraldatakse retsimine, leiad aja ja koha kursuse grupist. Osalemine on vabatahtlik.</p>
                 <p><strong>Tartu Tudengipäevad.</strong> Kevadel ja sügisel toimuv tudengifestival, kus on võistlusi, kontserte ja muid üritusi. <a href="https://studentdays.ee/">Vaata festivali kava</a>.</p>
                 <p><strong>Tartu ööelu.</strong> Kontserte, klubiõhtuid ja pidusid leiad <a href="https://www.kluub.ee/et/events/tartu">KLUUBi Tartu kalendrist</a>.</p>
                 <p><strong>OLE ROHKEM.</strong> <a href="https://olerohkem.ee/">Tudengimessi ja tudengiorganisatsioonide info</a>.</p>
-            </section>
+            </div>
 
-            <section class="block" id="kkk">
+            <div class="block" id="kkk">
                 <h2>Korduma kippuvad küsimused</h2>
 
                 <div class="dropdown">
@@ -151,7 +153,53 @@
                         <p>Vaata aine infot ja tunniplaani <a href="https://ois2.ut.ee/">ÕIS-is</a>. Kui aine pakub mitut eksamiaega, kontrolli, kas pead end sobivale ajale registreerima.</p>
                     </div>
                 </div>
-            </section>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kuidas leian oma esimese praktikumi ruumi?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Ava <a href="https://ois2.ut.ee/">ÕIS-is</a> oma tunniplaan ja vali õige nädala praktikum. Vaata hoone aadressi, ruuminumbrit ja rühma.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kust leian kodutööd?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Vaata aine Moodle’i kursuselt või õppejõu jagatud kursuselehelt vastava nädala ülesannet. Enne alustamist kontrolli tähtaega ja nõutud failivormingut. Pärast üleslaadimist vaata üle, kas esitatud fail avaneb.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                      <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Mida teha, kui kontrolltöö jäi tegemata?
+                      </button>
+                     <div class="dropdown-content">
+                        <p>Vaata kursuselehelt, kas järeltöö aeg on juba kirjas. Kui juhist ei leia, kirjuta õppejõule, millise kontrolltöö vahele jätsid, ja küsi selle vastamise kohta.</p>
+                     </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kellele kirjutada, kui puudun praktikumist?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Vaata kursuse juhendist puudumise ja järeletegemise korda, see võib igal ainel erineda. Kui juhendist vastust ei leia, kirjuta oma rühma juhendajale. Lisa aine nimi, praktikumi kuupäev ja rühm ning küsi, milline ülesanne tuleb iseseisvalt järele teha.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropbtn paragraph" onclick="toggleDropdown(this)">
+                        <img src="img/chevron.svg" alt=""> Kuidas valmistuda esimeseks kontrolltööks?
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Vaata kursuselehelt, millised teemad töösse kuuluvad ja milliseid abivahendeid võid kasutada. Lahenda näidiskontrolltööd mitu korda, üldjuhul on tööd sarnased.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
